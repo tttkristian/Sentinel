@@ -468,6 +468,3 @@ feature/* → PR → dev → PR → staging → PR → master
 - Verify the active connection environment variable before running migration commands.
 - Migration name must be descriptive (e.g., `Add-Migration AddAuditTrailFields`).# Managermanager Platform — Project Instructions
 
-> **⚠️ Read `GENERAL_INSTRUCTIONS.md` first.** This document only adds Managermanager-specific rules. All general rules (Clean Architecture, CQRS, code style, EF Core conventions, exception handling, testing, Git workflow, etc.) apply here unchanged.
-
----

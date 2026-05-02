@@ -11,6 +11,7 @@
 - One ASP.NET Core API exposing endpoints for every task module.
 - Each app/module is organized as an independent feature area inside the same solution (modular monolith).
 - Designed for **on-premise IIS deployment** initially, with a future migration path to Azure.
+- Designe a communications platform using asterisk to handle the calls and send the information to the API.
 
 ### First Module: Sentinel
 
