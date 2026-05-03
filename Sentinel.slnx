@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Sentinel.csproj" />
+  <Project Path="Sentinel.Infrastructure/Sentinel.Infrastructure.csproj" Id="4cc57ae7-f793-449c-81bb-d7b306ded13d" />
   <Project Path="src/Sentinel.Domain/Sentinel.Domain.csproj" Id="d5fa8601-6732-46df-ac6e-9b31c236c97a" />
 </Solution>
