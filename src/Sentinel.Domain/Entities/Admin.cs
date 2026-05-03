@@ -2,16 +2,17 @@ using Sentinel.Domain.Interfaces;
 
 namespace Sentinel.Domain.Entities;
 
-public sealed class PlatformAdmin : IActivatable 
+public sealed class Admin : IActivatable
 {
-    public Guid PlatformAdminId { get; set; }
+    public Guid AdminId { get; set; }
 
-    public required string AdminFulllName { get; set; }
+    public required string AdminFullName { get; set; }
 
     public required string Email { get; set; }
 
     public string? Permissions { get; set; }
 
     public bool IsActive { get; set; } = true;
+
 
 }

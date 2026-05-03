@@ -1,8 +1,8 @@
-using Sentinel.Domain.Entities;
+using Sentinel.Domain.Interfaces;
 
 namespace Sentinel.Domain.Entities;
 
-public sealed class Call
+public sealed class Call : IAuditable
 {
     public Guid CallId { get; set; }
 
@@ -17,8 +17,6 @@ public sealed class Call
     public Guid? OperatorId { get; set; }
 
     public Operator? Operator { get; set; }
-
-    public required string TwilioCallSid { get; set; }
 
     public required string FromNumber { get; set; }
 
@@ -47,6 +45,10 @@ public sealed class Call
     public DateTime? EndedAt { get; set; }
 
     public int? DurationSeconds { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    public CustomerCall? CustomerCall { get; set; }
 
     public Transcription? Transcription { get; set; }
 }
