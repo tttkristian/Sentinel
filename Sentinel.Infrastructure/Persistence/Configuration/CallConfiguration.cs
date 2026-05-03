@@ -57,10 +57,11 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
             builder.HasOne(c => c.Transcription)
                 .WithOne(t => t.Call)
                 .HasForeignKey<Transcription>(t => t.CallId) .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasIndex(c => c.BusinessId);
+            builder.HasIndex(c => c.CustomerId); 
+            builder.HasIndex(c => c.StartedAt);
             
-
-
-
 
         }
     }
