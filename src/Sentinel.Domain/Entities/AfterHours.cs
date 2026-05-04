@@ -10,8 +10,6 @@ public sealed class AfterHours : IAuditable
 
     public Business? Business { get; set; }
 
-    public bool IsAfterHours { get; set; }
-
     public TimeOnly StartTime { get; set; }
 
     public TimeOnly EndTime { get; set; }

@@ -2,7 +2,7 @@ using Sentinel.Domain.Interfaces;
 
 namespace Sentinel.Domain.Entities;
 
-public sealed class Admin : IActivatable
+public sealed class Admin : IActivatable, IAuditable
 {
     public Guid AdminId { get; set; }
 
@@ -15,5 +15,9 @@ public sealed class Admin : IActivatable
     public bool IsActive { get; set; } = true;
     public string AdminPhoneNumber { get; set; } = string.Empty;
 
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    
 
 }

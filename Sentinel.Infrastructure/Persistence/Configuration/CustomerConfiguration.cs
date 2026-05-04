@@ -25,7 +25,10 @@ public sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
             .HasForeignKey(cc => cc.CustomerId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasIndex(c => c.PhoneNumber);
+        builder.HasIndex(c => c.PhoneNumber).IsUnique();
+        builder.HasIndex(c => c.Email).IsUnique();
         builder.HasIndex(c => c.IsDeleted);
+
+        builder.HasQueryFilter(c => !c.IsDeleted);
     }
 }

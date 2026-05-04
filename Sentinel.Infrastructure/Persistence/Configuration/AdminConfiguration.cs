@@ -22,6 +22,10 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
                 .HasMaxLength(10);
             builder.Property(a => a.IsActive)
                 .IsRequired();
+            builder.Property(a => a.CreatedAt)
+                .IsRequired();
+            builder.Property(a => a.UpdatedAt)
+                .IsRequired();
 
             builder.HasIndex(a => a.Email)
                 .IsUnique();

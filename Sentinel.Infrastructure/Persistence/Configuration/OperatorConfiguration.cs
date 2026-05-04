@@ -32,12 +32,14 @@ public sealed class OperatorConfiguration : IEntityTypeConfiguration<Operator>
             .IsRequired();
             
 
-        builder.HasOne(c => c.Calls)
+        builder.HasMany(c => c.Calls)
             .WithOne(o => o.Operator)
             .HasForeignKey<Call>(c => c.OperatorId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasIndex(o => o.Email).IsUnique();
         builder.HasIndex(o => o.IsDeleted);
+
+        builder.HasQueryFilter(o => !o.IsDeleted);
     }
 }

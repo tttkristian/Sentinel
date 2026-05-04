@@ -30,7 +30,9 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
 
             builder.HasIndex(b => b.VirtualBusinessPhone).IsUnique();
             builder.HasIndex(b => b.IsDeleted);
+            builder.HasIndex(b => b.OwnerRealPhone).IsUnique();
 
+            builder.HasQueryFilter(b => !b.IsDeleted);
         }
     }
 }

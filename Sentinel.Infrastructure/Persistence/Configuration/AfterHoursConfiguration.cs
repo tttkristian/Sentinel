@@ -11,9 +11,6 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
             builder.ToTable("AfterHours", schema: "sentinel");
             builder.HasKey(ah => ah.AfterHoursId);
             builder.Property(ah => ah.AfterHoursId).ValueGeneratedNever();
-
-            builder.Property(ah => ah.IsAfterHours)
-                .IsRequired();
             builder.Property(ah => ah.StartTime)
                 .IsRequired();
             builder.Property(ah => ah.EndTime).IsRequired();

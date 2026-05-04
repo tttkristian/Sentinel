@@ -44,11 +44,6 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
                 .WithMany(cu => cu.Calls)
                 .HasForeignKey(c => c.CustomerId)
                 .OnDelete(DeleteBehavior.Restrict);
-           
-            builder.HasOne(c => c.Operator)
-                .WithMany(o => o.Calls)
-                .HasForeignKey(c => c.OperatorId)
-                .OnDelete(DeleteBehavior.Restrict);
             
             builder.HasOne(c => c.CustomerCall)
                 .WithOne(cc => cc.Call)
