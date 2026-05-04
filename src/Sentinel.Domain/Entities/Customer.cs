@@ -15,5 +15,5 @@ public sealed class Customer : ISoftDelete, IAuditable
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public ICollection<Call> Calls { get; set; } = [];
-    public ICollection<CustomerCalls> CustomerCalls { get; set; } = [];
+    public ICollection<CustomerCall> CustomerCalls { get; set; } = [];
 }

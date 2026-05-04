@@ -13,6 +13,7 @@ public sealed class Admin : IActivatable
     public string? Permissions { get; set; }
 
     public bool IsActive { get; set; } = true;
+    public string AdminPhoneNumber { get; set; } = string.Empty;
 
 
 }
