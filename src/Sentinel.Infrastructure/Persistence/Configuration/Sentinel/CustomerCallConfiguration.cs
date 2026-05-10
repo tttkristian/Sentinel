@@ -30,9 +30,9 @@ public sealed class CustomerCallConfiguration : IEntityTypeConfiguration<Custome
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(cc => cc.Call)
-            .WithMany()
-            .HasForeignKey(cc => cc.CallId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .WithOne(c => c.CustomerCall)
+            .HasForeignKey<CustomerCall>(cc => cc.CallId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasIndex(cc => cc.CustomerId);
         builder.HasIndex(cc => cc.BusinessId);
