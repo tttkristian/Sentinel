@@ -8,7 +8,7 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Business> builder)
         {
-            builder.ToTable("Businesses", schema: "sentinel");
+            
             builder.HasKey(b => b.BusinessId);
             builder.Property(b => b.BusinessId).ValueGeneratedNever();
 

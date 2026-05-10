@@ -10,7 +10,7 @@ public sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
     public void Configure(EntityTypeBuilder<Customer> builder)
     {
 
-        builder.ToTable("Customers", schema: "sentinel");
+        
         builder.HasKey(c => c.CustomerId);
         builder.Property(c => c.CustomerId).ValueGeneratedNever();
 
@@ -26,7 +26,7 @@ public sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasIndex(c => c.PhoneNumber).IsUnique();
-        builder.HasIndex(c => c.Email).IsUnique();
+        builder.HasIndex(c => c.Email).IsUnique().HasFilter("[Email] IS NOT NULL");
         builder.HasIndex(c => c.IsDeleted);
 
         builder.HasQueryFilter(c => !c.IsDeleted);

@@ -9,7 +9,7 @@ public sealed class TranscriptionConfiguration : IEntityTypeConfiguration<Transc
 {
     public void Configure(EntityTypeBuilder<Transcription> builder)
     {
-        builder.ToTable("Transcriptions", schema: "sentinel");
+        
         builder.HasKey(t => t.TranscriptionId);
         builder.Property(t => t.TranscriptionId).ValueGeneratedNever();
 

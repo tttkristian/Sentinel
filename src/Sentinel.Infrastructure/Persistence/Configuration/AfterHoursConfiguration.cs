@@ -8,7 +8,7 @@ namespace Sentinel.Infrastructure.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<AfterHours> builder)
         {
-            builder.ToTable("AfterHours", schema: "sentinel");
+            
             builder.HasKey(ah => ah.AfterHoursId);
             builder.Property(ah => ah.AfterHoursId).ValueGeneratedNever();
             builder.Property(ah => ah.StartTime)

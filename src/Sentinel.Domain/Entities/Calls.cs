@@ -2,7 +2,7 @@ using Sentinel.Domain.Interfaces;
 
 namespace Sentinel.Domain.Entities;
 
-public sealed class Call : IAuditable
+public sealed class Call : IAuditable, ISoftDelete
 {
     public Guid CallId { get; set; }
 
@@ -51,4 +51,6 @@ public sealed class Call : IAuditable
     public CustomerCall? CustomerCall { get; set; }
 
     public Transcription? Transcription { get; set; }
+    public bool IsDeleted { get; set; }
+    public DateTime? DeletedAt { get; set; }
 }

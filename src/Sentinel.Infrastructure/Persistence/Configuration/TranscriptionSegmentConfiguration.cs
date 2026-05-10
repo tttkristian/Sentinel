@@ -10,7 +10,7 @@ public sealed class TranscriptSegmentConfiguration : IEntityTypeConfiguration<Tr
 {
     public void Configure(EntityTypeBuilder<TranscriptSegment> builder)
     {
-        builder.ToTable("TranscriptSegments", schema: "sentinel");
+        
         builder.HasKey(s => s.SegmentId);
         builder.Property(s => s.SegmentId).ValueGeneratedNever();
 

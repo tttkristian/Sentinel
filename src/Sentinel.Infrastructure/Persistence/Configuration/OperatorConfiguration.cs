@@ -9,7 +9,7 @@ public sealed class OperatorConfiguration : IEntityTypeConfiguration<Operator>
 {
     public void Configure(EntityTypeBuilder<Operator> builder)
     {
-        builder.ToTable("Operators", schema: "sentinel");
+        
         builder.HasKey(o => o.OperatorId);
         builder.Property(o => o.OperatorId).ValueGeneratedNever();
 
@@ -31,11 +31,6 @@ public sealed class OperatorConfiguration : IEntityTypeConfiguration<Operator>
         builder.Property(o => o.UpdatedAt)
             .IsRequired();
             
-
-        builder.HasMany(c => c.Calls)
-            .WithOne(o => o.Operator)
-            .HasForeignKey<Call>(c => c.OperatorId)
-            .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasIndex(o => o.Email).IsUnique();
         builder.HasIndex(o => o.IsDeleted);

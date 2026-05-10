@@ -12,7 +12,7 @@ public sealed class CustomerCallConfiguration : IEntityTypeConfiguration<Custome
 {
     public void Configure(EntityTypeBuilder<CustomerCall> builder)
     {
-        builder.ToTable("CustomerCalls", schema: "sentinel");
+        
         builder.HasKey(cc => cc.CustomerCallId);
         builder.Property(cc => cc.CustomerCallId).ValueGeneratedNever();
 
