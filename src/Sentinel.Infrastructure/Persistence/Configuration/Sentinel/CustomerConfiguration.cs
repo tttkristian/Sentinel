@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sentinel.Domain.Entities;
 
-namespace Sentinel.Infrastructure.Persistence.Configuration;
+namespace Sentinel.Infrastructure.Persistence.Configuration.Sentinel;
 
 public sealed class CustomerConfiguration : IEntityTypeConfiguration<Customer>
 {

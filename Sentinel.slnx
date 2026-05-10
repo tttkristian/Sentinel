@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Sentinel.Api/Sentinel.Api.csproj" Id="a1fde926-f598-41ce-9e3a-8ceddb41f620" />
-  <Project Path="Sentinel.Infrastructure/Sentinel.Infrastructure.csproj" Id="4cc57ae7-f793-449c-81bb-d7b306ded13d" />
+  <Project Path="src/Sentinel.Api/Sentinel.Api.csproj" Id="a1fde926-f598-41ce-9e3a-8ceddb41f620" />
+  <Project Path="src/Sentinel.Infrastructure/Sentinel.Infrastructure.csproj" Id="4cc57ae7-f793-449c-81bb-d7b306ded13d" />
   <Project Path="src/Sentinel.Domain/Sentinel.Domain.csproj" Id="d5fa8601-6732-46df-ac6e-9b31c236c97a" />
 </Solution>

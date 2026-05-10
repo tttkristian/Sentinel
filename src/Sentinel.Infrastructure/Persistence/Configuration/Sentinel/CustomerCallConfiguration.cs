@@ -1,11 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sentinel.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Sentinel.Infrastructure.Persistence.Configuration;
+namespace Sentinel.Infrastructure.Persistence.Configuration.Sentinel;
 
 
 public sealed class CustomerCallConfiguration : IEntityTypeConfiguration<CustomerCall>

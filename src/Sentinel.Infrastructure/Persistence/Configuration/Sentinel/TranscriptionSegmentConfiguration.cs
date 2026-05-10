@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sentinel.Domain.Entities;
 
-namespace Sentinel.Infrastructure.Persistence.Configuration;
+namespace Sentinel.Infrastructure.Persistence.Configuration.Sentinel;
 
 // TranscriptSegmentConfiguration.cs
 public sealed class TranscriptSegmentConfiguration : IEntityTypeConfiguration<TranscriptSegment>

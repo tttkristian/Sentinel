@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sentinel.Domain.Entities;
 
-namespace Sentinel.Infrastructure.Persistence.Configuration;
+namespace Sentinel.Infrastructure.Persistence.Configuration.Sentinel;
 
 // TranscriptionConfiguration.cs
 public sealed class TranscriptionConfiguration : IEntityTypeConfiguration<Transcription>
